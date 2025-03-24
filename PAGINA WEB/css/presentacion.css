@@ -1,0 +1,125 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más profesional */
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0,0,0,0.7); /* Fondo ligeramente transparente */
+  color: #eee; /* Color de texto claro */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegurar que el contenido ocupe toda la altura */
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1rem; /* Tamaño de texto base */
+}
+
+h1, h2 {
+  font-weight: 700; /* Negritas */
+  margin-bottom: 10px;
+}
+
+a {
+  color: #007bff; /* Enlace azul */
+  text-decoration: none; /* Quitar subrayado */
+}
+
+a:hover {
+  text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+
+/* Estilos para el header */
+#header {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 20px;
+  min-height: 300px;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+  background-size: cover;
+  background-position: center; /* Centrar imagen de fondo */
+  filter: blur(8px); /* Aumentar blur para mejor efecto */
+  opacity: 0.2; /* Reducir opacidad */
+  z-index: -1;
+}
+
+#header img {
+  width: 100%; /* Ajustar el ancho de la imagen al contenedor */
+  max-width: 300px; /* Limitar el ancho máximo de la imagen */
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 20px; /* Espacio para pantallas pequeñas */
+  border: 5px solid #eee;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#header h1 {
+  flex: 1;
+  font-size: 2em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra de texto para mejor legibilidad */
+
+}
+
+/* Estilo para la sección de sinopsis */
+#caracteristicas {
+  flex: 1; /* Ocupar el espacio restante */
+  padding: 10px;
+}
+
+#caracteristicas p {
+  font-size: 1.5em;
+}
+
+/* Estilos para el trailer */
+#trailer {
+  width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+  height: auto;
+  margin-top: 20px; /* Espacio entre el poster y el trailer */
+}
+
+#trailer iframe {
+  max-width: 700px;
+  width: 100%;
+  height: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Sombra más suave */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) { /* Ajustes para tablets y móviles */
+  #header {
+      flex-direction: column; /* Apilar elementos verticalmente */
+      align-items: center; /* Centrar elementos */
+  }
+
+  #header img {
+      margin-right: 0; /* Eliminar margen derecho */
+      margin-bottom: 20px; /* Espacio entre imagen y título */
+      max-width: 100%; /* Imagen ocupa todo el ancho */
+  }
+
+  #header h1 {
+      font-size: 1.5em; /* Reducir tamaño del título */
+      text-align: center; /* Centrar título */
+  }
+
+  #caracteristicas {
+      width: 100%; /* Sección de características ocupa todo el ancho */
+  }
+}
