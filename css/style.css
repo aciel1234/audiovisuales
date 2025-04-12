@@ -233,11 +233,15 @@ h5 {
     width: 90%;
     position: relative;
 }
+.animados>a>img {
+    width: 70%;
+    position: relative;
+}
 .doramas>a>img {
     width: 80%;
     position: relative;
 }
-.peliculas>a>img, .series>a>img, .animes>a>img, .muñes>a>img, .novelas>a>img, .shows>a>img, .doramas>a>img {
+.peliculas>a>img, .series>a>img, .animes>a>img, .muñes>a>img, .novelas>a>img, .shows>a>img, .doramas>a>img, .animados>a>img {
     transition: 0.5s ease;
     &:hover {
         cursor: pointer;
@@ -352,38 +356,12 @@ h5 {
 }
 
     /* seccion catalogo */
-    /*
- .portadaCatalogos {
-    display: grid;
-    width: 30%;
-    grid-template-columns: repeat(auto-fit,
-    minmax(350px, 3fr));
-    gap: 30px;
-    justify-content: center;
-    margin: 30px auto;
-}
-.peliculas>a>img, .series>a>img, .animes>a>img, .muñes>a>img, .novelas>a>img, .doramas>a>img {
-    left: 50% auto;
-    &:hover {
-        transform: none;
-    }
-}
-.doramas>a>img {
-    width: 90%;
-}
-.shows>a>img  {
-    margin-left: 4px;
-    &:hover {
-        transform: none;
-    }
-} */
-
 .portadaCatalogos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-content: center;
 }
-.peliculas>a>img, .series>a>img, .animes>a>img, .muñes>a>img, .novelas>a>img, .doramas>a>img {
+.peliculas>a>img, .series>a>img, .animes>a>img, .muñes>a>img, .novelas>a>img, .doramas>a>img, .animados>a>img {
     left: 50% auto;
     &:hover {
         transform: none;
@@ -403,5 +381,8 @@ h5 {
 }
 .novelas>a>img {
     width: 100%;
+}
+.animados>a>img {
+    width: 90%;
 }
 }

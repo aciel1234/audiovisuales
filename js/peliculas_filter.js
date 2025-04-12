@@ -39,4 +39,4 @@ document.addEventListener('keyup', a=>{
 let cantidad = filterableCards.length;
 console.log(cantidad)
 let totalPelis = document.getElementById('totalPeliculas');
-totalPelis.innerText = `Total de peliculas: ${cantidad}`;
+totalPelis.innerText = `Total: ${cantidad}`;
