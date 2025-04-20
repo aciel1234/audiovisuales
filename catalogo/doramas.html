@@ -1,60 +1,389 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Próximamente</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0; /* Color de fondo suave */
-            color: #333; /* Color de texto oscuro */
-        }
-
-        .container {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: white;
-        }
-
-        h1 {
-            font-size: 2em;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
-        /* Estilos para pantallas pequeñas */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.5em;
-            }
-
-            p {
-                font-size: 1em;
-            }
-        }
-    </style>
+    <title>TecnoSoft Audiovisuales</title>
+    <link rel="icon" href="../img/memoria.png">
+    <link rel="stylesheet" href="../css/peliculas.css">
+    <link rel="stylesheet" id="buscar" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<header>
+
+</header>
 <body>
+   <!--seccion header-->
+   <header>
+    <nav class="navbar">
+        <div class="brand-title">TecnoSoft</div>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="../index.html">Regresar al inicio</a></li>
+            </ul>
+        </div>
+      </nav>
+    </header>
 
-    <div class="container">
-        <h1>Estamos trabajando en algo increíble.</h1>
-        <p>Nuestra página web está en construcción. Regresa pronto para ver lo que tenemos preparado.</p>
-        <!-- Opcional: Puedes agregar una imagen o un logo aquí -->
-        <img src="../img/memoria.png" alt="Tu Logo" width="200"> <!--- Reemplaza "tu_logo.png" con la ruta de tu logo -->
-    </div>
+    <hr>
 
+    <!--seccion de busqueda-->
+    <section>
+        <div class="seccionBuscar">
+            <span class="buscarTitulo">Buscar pelicula</span>
+            <div class="botonbuscar">
+                <input type="search" placeholder="Buscar..." class="buscar" id="buscar">
+                <button class="fa-solid fa-magnifying-glass" id="confbuscar"></button>
+            </div>
+        </div>
+    </section>
+        <hr style="width: 50%;">
+
+        <h4 id="totalPeliculas"></h4>
+
+        <!-- seccion de filtrado -->
+    <section>
+        <div class="class">
+            <br>
+            <h4>Filtrar por género</h4>
+        </div>
+        <div class="container">
+            <div class="filter_buttons">
+                <button class="active" data-name="todas">Todas</button>
+                <button data-name="accion">Accion</button>
+                <button data-name="artes marciales">Artes Marciales</button>
+                <button data-name="aventura">Aventura</button>
+                <button data-name="catastrofes">Catástrofes</button>
+                <button data-name="ciencia ficcion">Ciencia Ficcion</button>
+                <button data-name="crimen">Crimen</button>
+                <button data-name="comedia">Comedia</button>
+                <button data-name="deporte">Deporte</button>
+                <button data-name="drama">Drama</button>
+                <button data-name="fantasia">Fantasia</button>
+                <button data-name="medicina">Medicina</button>
+                <button data-name="pelea">Pelea</button>
+                <button data-name="policiaco">Policiaco</button>
+                <button data-name="robos">Robos</button>
+                <button data-name="romance">Romance</button>
+                <button data-name="thriller">Thriller</button>
+                <button data-name="terror">Terror</button>
+            </div>
+        </div>
+    </section>
+
+    <!--seccion de peliculas-->
+    <section>
+        <div class="filterable_cards">
+
+            <div class="card" data-class="romance" data-name="comedia">
+                <img src="../catalogo/doramas/sa_rang_eui_bul_sa_chak-297244090-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Aterrizaje De Emergencia - Crash Landing On You</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2019</h6>
+                    <p class="card_text"><a href="doramas_html/crashlanding.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="romance" data-name="comedia" data-gender="drama">
+                <img src="../catalogo/doramas/xo_kitty-921538312-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Besos  Kitty - XO Kitty</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2023</h6>
+                    <p class="card_text"><a href="doramas_html/besoskitty1.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="romance" data-name="comedia" data-gender="drama">
+                <img src="../catalogo/doramas/BESOS KITTY [TEMP 2].jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Besos  Kitty - XO Kitty</h6>
+                    <h6 class="card_title">Temporada: 2</h6>
+                    <h6 class="card_title">2025</h6>
+                    <p class="card_text"><a href="doramas_html/besoskitty2.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="romance" data-name="comedia" data-gender="fantasia">
+                <img src="../catalogo/doramas/ssawooja_gwishina-926211554-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Bring It On Ghost - Lets Fight Ghost</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2016</h6>
+                    <p class="card_text"><a href="doramas_html/bringitonghost.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="drama">
+                <img src="../catalogo/doramas/cinderellawa_ne_myungui_gisa-820091229-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Cinderella And Four Knights</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2016</h6>
+                    <p class="card_text"><a href="doramas_html/cinderellaandfourknights.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="drama" data-gender="medicina">
+                <img src="../catalogo/doramas/d_day_aka_di_dei_aka_tv_series-370335487-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">D Day</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2015</h6>
+                    <p class="card_text"><a href="doramas_html/dday.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="drama" data-gender="medicina" data-name="romance">
+                <img src="../catalogo/doramas/taeyangui_huye-204271040-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Descendientes Del Sol</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2016</h6>
+                    <p class="card_text"><a href="doramas_html/descendientesdelsol.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="drama" data-gender="ciencia ficcion" data-name="romance">
+                <img src="../catalogo/doramas/neodo_inganini-865497660-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Eres Humano Tambien</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2018</h6>
+                    <p class="card_text"><a href="doramas_html/ereshumanotambien.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="drama" data-gender="comedia" data-name="romance">
+                <img src="../catalogo/doramas/saikojiman_gwaenchanha-306270712-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Esta Bien No Estar Bien</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2020</h6>
+                    <p class="card_text"><a href="doramas_html/estabiennoestarbien.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="drama" data-gender="comedia" data-name="romance">
+                <img src="../catalogo/doramas/kkotboda_namja_boys_before_flowers_boys_over_flowers-931799591-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">F4 - Boys Over Flowers</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2021</h6>
+                    <p class="card_text"><a href="doramas_html/f4.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="drama" data-gender="thriller">
+                <img src="../catalogo/doramas/haepiniseu-309984950-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Happiness</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2021</h6>
+                    <p class="card_text"><a href="doramas_html/happiness.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="comedia" data-gender="romance" data-name="fantasia">
+                <img src="../catalogo/doramas/saikometeuri_geunyeoseok-135688510-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">He Is Psychometric</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2019</h6>
+                    <p class="card_text"><a href="doramas_html/heispsychometric.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="comedia" data-gender="romance">
+                <img src="../catalogo/doramas/hellospring.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Hello Spring</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2015</h6>
+                    <p class="card_text"><a href="doramas_html/hellospring.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="comedia" data-gender="romance" data-name="drama">
+                <img src="../catalogo/doramas/killmehealme.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Kill Me Heal Me</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2015</h6>
+                    <p class="card_text"><a href="doramas_html/killmehealme.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="accion" data-gender="thriller">
+                <img src="../catalogo/doramas/maedeudok-900295689-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Mad Dog</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2016</h6>
+                    <p class="card_text"><a href="doramas_html/maddog.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="fantasia" data-gender="drama">
+                <img src="../catalogo/doramas/alhambeula_gungjeon_ui_chueog-667647583-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Memorias De Alhambra</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2018</h6>
+                    <p class="card_text"><a href="doramas_html/memoriasdealhambra.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="fantasia" data-gender="comedia" data-name="romance">
+                <img src="../catalogo/doramas/MI ADORABLE DEMONIO [TEMP 1].jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Mi Adorable Demonio</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2023</h6>
+                    <p class="card_text"><a href="doramas_html/miadorabledemonio.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="fantasia" data-gender="drama" data-name="romance">
+                <img src="../catalogo/doramas/dangshini_jamdeun_sai-138704156-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Mientras Dormias</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2017</h6>
+                    <p class="card_text"><a href="doramas_html/mientrasdormias.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="thriller" data-gender="accion" data-name="crimen">
+                <img src="../catalogo/doramas/money_heist_korea_joint_economic_area-629987008-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Money Heist - La Casa De Papel: Corea</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2022</h6>
+                    <p class="card_text"><a href="doramas_html/moneyheist.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="comedia" data-gender="romance" data-name="fantasia">
+                <img src="../catalogo/doramas/cheolinwanghoo-654279255-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Mr Queen</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2020</h6>
+                    <p class="card_text"><a href="doramas_html/mrqueen.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="drama" data-gender="romance">
+                <img src="../catalogo/doramas/my_holo_love-281767192-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">My Holo Love</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2020</h6>
+                    <p class="card_text"><a href="doramas_html/myhololove.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="drama" data-gender="romance" data-name="comedia">
+                <img src="../catalogo/doramas/geomsa_peurinseseu-825552137-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Prosecutor Princess</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2010</h6>
+                    <p class="card_text"><a href="doramas_html/prosecutor.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="drama" data-gender="romance" data-name="fantasia">
+                <img src="../catalogo/doramas/rebornrich.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Reborn Rich</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2022</h6>
+                    <p class="card_text"><a href="doramas_html/rebornrich.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="drama" data-gender="romance" data-name="fantasia">
+                <img src="../catalogo/doramas/pongdang_pongdang_love-568804151-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Splash Love</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2015</h6>
+                    <p class="card_text"><a href="doramas_html/splashlove.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="drama">
+                <img src="../catalogo/doramas/seutateueob-261373962-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Start Up</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2020</h6>
+                    <p class="card_text"><a href="doramas_html/startup.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="comedia" data-gender="romance">
+                <img src="../catalogo/doramas/areumdawun_geodaeege_to_the_beautiful_you-552869913-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">To The Beautiful You</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2012</h6>
+                    <p class="card_text"><a href="doramas_html/tothebeautifullyou.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="thriller" data-gender="ciencia ficcion" data-name="fantasia">
+                <img src="../catalogo/doramas/tunnel.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Tunnel</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2017</h6>
+                    <p class="card_text"><a href="doramas_html/tunnel.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="comedia" data-gender="romance" data-name="drama">
+                <img src="../catalogo/doramas/Touch_Your_Heart-tvN-2019-02.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Un Lugar En Tu Corazon</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2019</h6>
+                    <p class="card_text"><a href="doramas_html/unlugarentucorazon.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="accion" data-name="drama">
+                <img src="../catalogo/doramas/vagabond.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Vagabond</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2019</h6>
+                    <p class="card_text"><a href="doramas_html/vagabond.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-class="comedia" data-gender="romance" data-name="drama">
+                <img src="../catalogo/doramas/you Raise Me Up.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">You Raise Me Up</h6>
+                    <h6 class="card_title">Temporada: 1</h6>
+                    <h6 class="card_title">2021</h6>
+                    <p class="card_text"><a href="doramas_html/youraisemeup.html">Leer Más</a></p>
+                </div>
+            </div>
+
+            
+
+
+
+        </div>
+    </section>
+
+    
+
+    <script src="../js/peliculas_filter.js"></script>
+    <script src="../js/img_lazy.js"></script>
 </body>
 </html>
