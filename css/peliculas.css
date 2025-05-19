@@ -9,11 +9,9 @@
     font-weight: lighter;
 }
 body {
-    background: radial-gradient(#666, #333, black);
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(1px);
     width: 91%;
-    border: grey 2px solid;
 }
 
 /* header y menu desplegable */
@@ -27,7 +25,8 @@ body {
 .brand-title {
     font-size: 2rem;
     margin: .5rem;
-    color: #72e1e9;
+    color: rgb(229, 9, 20);
+    font-weight: bold;
 }
 
 .navbar-links img {

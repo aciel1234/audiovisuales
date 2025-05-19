@@ -27,8 +27,8 @@ body {
 .brand-title {
     font-size: 2rem;
     margin: .5rem;
-    color: #72e1e9;
-    font-weight: normal;
+    color: rgb(229, 9, 20);
+    font-weight: bold;
 }
 
 .navbar-links {
@@ -105,7 +105,8 @@ h1 {
     font-size: 40px;
 }
 .tecno {
-    color: #72e1e9
+    color: rgb(229, 9, 20);
+    font-weight: bold;
 }
 h2, h4 {
     font-style: italic;

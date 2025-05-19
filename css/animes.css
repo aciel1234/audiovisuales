@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('../img/back-anime.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #f7f2ef;
+    font-family: sans-serif;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+.brand-title {
+    color: rgb(229, 9, 20);
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.navbar-links ul li {
+    list-style: none;
+}
+.navbar-links ul li a {
+    text-decoration: none;
+    color: white;
+    transition: .5s ease;
+    position: relative;
+    width: max-content;
+}
+.navbar-links ul li a::before {
+    content: '';
+    background: rgb(229, 9, 20);
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+}
+.navbar-links ul li a:hover::before {
+    content: '';
+    background: rgb(229, 9, 20);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* seccion buscar */
+.filtrar-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.botonbuscar {
+    position: relative;
+    float: right;
+}
+.buscar {
+    padding: 10px;
+    border-radius: 5px 5px 5px 5px;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+    color: #121212;
+    width: 90%;
+}
+#confbuscar {
+    background-color: crimson;
+    width: 50px;
+    height: 37px;
+    padding: 10px 15px;
+    position: absolute;
+    float: right;
+    border: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.categorias {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    flex-direction: column;
+}
+.categorias select {
+    margin: 10px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px 5px 0px 0;
+}
+
+/* seccion principal */
+.container {
+    padding: 20px;
+}
+.filterable_cards {
+    display: flex;
+    margin-top: 25px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    flex-basis: 300px;
+    background-color: #fff;
+    padding: 3px;
+    border-radius: 8px;
+    max-width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin: 10px auto;
+    transition: .5s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+.card.hide {
+    display: none;
+}
+.card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    max-height: 300px;
+    height: 300px;
+}
+.card_body {
+    padding: 5px;
+}
+.card_title {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+.card_text {
+    color: black;
+    font-size: 18px;
+}
+.card_text a {
+    color: black;
+}
