@@ -60,3 +60,37 @@ document.addEventListener("DOMContentLoaded", function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
+
+// peliculas destacadas
+const apiKey = "736ffafa";
+    const titulos = [
+      "One Of Them Days",
+      "Den of Thieves: Pantera",
+      "Sinners",
+      "Black Bag",
+      "Presence",
+      "Thunderbolts"
+    ];
+
+    const grid = document.getElementById("peliculasGrid");
+
+    titulos.forEach(titulo => {
+      fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(titulo)}&apikey=${apiKey}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data.Response === "True") {
+            const div = document.createElement('div');
+            div.className = 'pelicula';
+            div.innerHTML = `
+              <img src="${data.Poster !== "N/A" ? data.Poster : 'https://via.placeholder.com/150x220?text=No+Image'}" alt="${data.Title}">
+              <h3>${data.Title}</h3>
+              <p>⭐ ${data.imdbRating}</p>
+              <p>(${data.Year})</p>
+            `;
+            grid.appendChild(div);
+          }
+        })
+        .catch(error => {
+          console.error("Error al cargar película:", error);
+        });
+    });
