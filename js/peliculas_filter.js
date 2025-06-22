@@ -19,8 +19,8 @@ const filterCards = (e) => {
     })
 };
 
-// añadir evento para cada filter button
-filterButtons.forEach(button => button.addEventListener('click', filterCards))
+// añadir evento para cada filter option del select
+filterButtons.forEach(button => button.addEventListener('change', filterCards))
 
 /* PARA EL BOTON DE BUSCAR */
 document.addEventListener('keyup', a=>{
