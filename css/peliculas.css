@@ -241,3 +241,16 @@ header {
       font-size: 0.9em;
       color: #555;
     }
+
+
+    /* lazu loading */
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
