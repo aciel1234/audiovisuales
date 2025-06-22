@@ -14,12 +14,6 @@ body {
     font-family: sans-serif;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
 header {
     background: rgba(0, 0, 0, 0.7);
     display: flex;
@@ -175,7 +169,7 @@ header {
     font-size: 20px;
     border: none;
     outline: none;
-    background-color: #333;
+    background-color: #2c2e94;
     color: white;
     cursor: pointer;
     padding: 14px;
@@ -194,7 +188,7 @@ header {
 }
 
 #btnSubir:hover {
-    background-color: #555;
+    background-color: #2c5c94;
 }
 
 #btnSubir i {
@@ -243,7 +237,7 @@ header {
     }
 
 
-    /* lazu loading */
+    /* lazy loading */
 .card {
   opacity: 0;
   transform: translateY(20px);

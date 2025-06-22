@@ -25,48 +25,35 @@
             </ul>
         </div>
       </nav>
-    </header>
-
-    <hr>
 
     <!--seccion de busqueda-->
-    <section>
         <div class="seccionBuscar">
-            <span class="buscarTitulo">Buscar pelicula</span>
             <div class="botonbuscar">
                 <input type="search" placeholder="Buscar..." class="buscar" id="buscar">
                 <button class="fa-solid fa-magnifying-glass" id="confbuscar"></button>
             </div>
         </div>
-    </section>
-        <hr style="width: 50%;">
-
-        <h4 id="totalPeliculas"></h4>
 
         <!-- seccion de filtrado -->
-    <section>
-        <div class="class">
-            <br>
-            <h4>Filtrar por género</h4>
-        </div>
-        <div class="container">
-            <div class="filter_buttons">
-                <button class="active" data-name="todas">Todas</button>
-                <button data-name="accion">Accion</button>
-                <button data-name="ciencia ficcion">Ciencia Ficcion</button>
-                <button data-name="crimen">Crimen</button>
-                <button data-name="comedia">Comedia</button>
-                <button data-name="drama">Drama</button>
-                <button data-name="fantasia">Fantasia</button>
-                <button data-name="medicina">Medicina</button>
-                <button data-name="romance">Romance</button>
-                <button data-name="thriller">Thriller</button>
-            </div>
-        </div>
-    </section>
-
+        <div class="filtrar-contenedor">  
+            <div class="categorias">
+                Filtrar por género
+                <select class="generos">
+                    <option class="active" value="todas">Todas</option>
+                    <option value="accion">Acción</option>
+                    <option value="ciencia ficcion">Ciencia Ficción</option>
+                    <option value="crimen">Crimen</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="drama">Drama</option>
+                    <option value="fantasia">Fantasia</option>
+                    <option value="medicina">Medicina</option>
+                    <option value="romance">Romance</option>
+                    <option value="thriller">Thriller</option>
+                </select> 
+</header>
     <!--seccion de peliculas-->
-    <section>
+    <section class="container">
+        <h4 id="totalPeliculas"></h4>
         <div class="filterable_cards">
 
             <div class="card" data-class="romance" data-name="comedia">
@@ -407,7 +394,10 @@
     </section>
 
     
-
+<!-- Botón para subir al inicio con ícono -->
+<button id="btnSubir" title="Subir al inicio">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
     <script src="../js/peliculas_filter.js"></script>
     <script src="../js/img_lazy.js"></script>
 </body>

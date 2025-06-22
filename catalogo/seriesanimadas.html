@@ -24,58 +24,46 @@
                 <li><a href="../index.html">Regresar al inicio</a></li>
             </ul>
         </div>
-      </nav>
-    </header>
-
-    <hr>
+    </nav>
 
     <!--seccion de busqueda-->
-    <section>
-        <div class="seccionBuscar">
-            <span class="buscarTitulo">Buscar animado</span>
+    <div class="seccionBuscar">
             <div class="botonbuscar">
                 <input type="search" placeholder="Buscar..." class="buscar" id="buscar">
                 <button class="fa-solid fa-magnifying-glass" id="confbuscar"></button>
             </div>
         </div>
-    </section>
-        <hr style="width: 50%;">
-
-        <h4 id="totalPeliculas"></h4>
-
         <!-- seccion de filtrado -->
-    <section>
-        <div class="class">
-            <br>
-            <h4>Filtrar por género</h4>
-        </div>
-        <div class="container">
-            <div class="filter_buttons">
-                <button class="active" data-name="todas">Todas</button>
-                <button data-name="accion">Accion</button>
-                <button data-name="artes marciales">Artes Marciales</button>
-                <button data-name="aventura">Aventura</button>
-                <button data-name="ciencia ficcion">Ciencia Ficcion</button>
-                <button data-name="cristiana">Cristiana</button>
-                <button data-name="comedia">Comedia</button>
-                <button data-name="crimen">Crimen</button>
-                <button data-name="deporte">Deporte</button>
-                <button data-name="drama">Drama</button>
-                <button data-name="fantasia">Fantasia</button>
-                <button data-name="juvenil">Juvenil</button>
-                <button data-name="musical">Musical</button>
-                <button data-name="pelea">Pelea</button>
-                <button data-name="romance">Romance</button>
-                <button data-name="superheroes">Superheroes</button>
-                <button data-name="thriller">Thriller</button>
+
+        <div class="filtrar-contenedor">  
+            <div class="categorias">
+                Filtrar por género
+                <select class="generos">
+                    <option class="active" value="todas">Todas</option>
+                    <option value="accion">Acción</option>
+                    <option value="artes marciales">Artes Marciales</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="ciencia ficcion">Ciencia Ficción</option>
+                    <option value="crimen">Crimen</option>
+                    <option value="cristiana">Cristiana</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="deporte">Deporte</option>
+                    <option value="drama">Drama</option>
+                    <option value="fantasia">Fantasia</option>
+                    <option value="juvenil">Juvenil</option>
+                    <option value="musical">Musical</option>
+                    <option value="pelea">Pelea</option>
+                    <option value="romance">Romance</option>
+                    <option value="superheroes">Superheroes</option>
+                    <option value="thriller">Thriller</option>
+                </select>
             </div>
         </div>
-    </section>
-
+</header>
     <!--seccion de peliculas-->
-    <section>
+    <section class="container">
+<p id="totalPeliculas"></p>
         <div class="filterable_cards">
-
             <div class="card" data-name="comedia">
                 <img src="../catalogo/animados/ANGRY BIRDS TOONS [TEMP 1].jpg" alt="">
                 <div class="card_body">
@@ -342,7 +330,10 @@
     </section>
 
     
-
+<!-- Botón para subir al inicio con ícono -->
+<button id="btnSubir" title="Subir al inicio">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
     <script src="../js/peliculas_filter.js"></script>
     <script src="../js/img_lazy.js"></script>
 </body>
