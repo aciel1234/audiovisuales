@@ -1,5 +1,5 @@
 // seleccionamos todos los botones para filtrar y todas las cartas filtrables
-const filterButtons = document.querySelectorAll('.filter_buttons button');
+const filterButtons = document.querySelectorAll('.generos');
 const filterableCards = document.querySelectorAll('.filterable_cards .card');
 
 //definir la funcion de filterCards
@@ -13,7 +13,7 @@ const filterCards = (e) => {
         //añadir la clase ´ocultar´ paraocultar la carta inicialmente
         card.classList.add('hide');
         //comprobar si la carta coincide con el boton de filtrado o el boton 'todas' esta seleccionado
-        if(card.dataset.name === e.target.dataset.name || e.target.dataset.name === 'todas' || card.dataset.class === e.target.dataset.name || card.dataset.gender === e.target.dataset.name) {
+        if(card.dataset.name === e.target.value || e.target.value === 'todas' || card.dataset.class === e.target.value || card.dataset.gender === e.target.value) {
             card.classList.remove('hide');
         }
     })
@@ -21,8 +21,6 @@ const filterCards = (e) => {
 
 // añadir evento para cada filter button
 filterButtons.forEach(button => button.addEventListener('click', filterCards))
-
-
 
 /* PARA EL BOTON DE BUSCAR */
 document.addEventListener('keyup', a=>{
@@ -39,4 +37,26 @@ document.addEventListener('keyup', a=>{
 let cantidad = filterableCards.length;
 console.log(cantidad)
 let totalPelis = document.getElementById('totalPeliculas');
-totalPelis.innerText = `Total: ${cantidad}`;
+totalPelis.innerText = `Total de películas: ${cantidad}`;
+totalPelis.style.background = 'rgba(0, 0, 0, 0.7)'
+totalPelis.style.margin = '-20px';
+totalPelis.style.textAlign = 'center';
+
+
+
+// Mostrar/ocultar el botón según el scroll
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("btnSubir");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 200) {
+            btn.classList.add("visible");
+        } else {
+            btn.classList.remove("visible");
+        }
+    });
+
+    btn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
