@@ -64,11 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // peliculas destacadas
 const apiKey = "736ffafa";
     const titulos = [
-      "One Of Them Days",
-      "Den of Thieves: Pantera",
+      "Warfare",
+      "The Accountant 2",
       "Sinners",
       "Black Bag",
-      "Presence",
+      "Fountain of Youth",
       "Thunderbolts"
     ];
 
