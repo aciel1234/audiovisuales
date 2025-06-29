@@ -1,60 +1,350 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Próximamente</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0; /* Color de fondo suave */
-            color: #333; /* Color de texto oscuro */
-        }
-
-        .container {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: white;
-        }
-
-        h1 {
-            font-size: 2em;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
-        /* Estilos para pantallas pequeñas */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.5em;
-            }
-
-            p {
-                font-size: 1em;
-            }
-        }
-    </style>
+    <title>Anime Web</title>
+    <link rel="icon" href="../img/memoria.png">
+    <link rel="stylesheet" href="../css/anime_movies.css">
+    <link rel="stylesheet" id="buscar" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="brand-title">TecnoSoft</div>
+            <div class="navbar-links">
+                <ul>
+                    <li>
+                        <a href="animes_portada.html">Atrás</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-    <div class="container">
-        <h1>Estamos trabajando en algo increíble.</h1>
-        <p>Nuestra página web está en construcción. Regresa pronto para ver lo que tenemos preparado.</p>
-        <!-- Opcional: Puedes agregar una imagen o un logo aquí -->
-        <img src="../img/memoria.png" alt="Tu Logo" width="200"> <!--- Reemplaza "tu_logo.png" con la ruta de tu logo -->
-    </div>
+        <div class="filtrar-contenedor">
+            <div class="seccionBuscar">
+                <div class="botonbuscar">
+                    <input type="search" placeholder="Buscar anime" class="buscar" id="buscar">
+                    <button class="fa-solid fa-magnifying-glass" id="confbuscar"></button>
+                </div>
+            </div>
+            
+            <div class="categorias">
+                Filtrar por género
+                <select class="generos">
+                    <option class="active" value="todas">Todos</option>
+                    <option value="accion">Acción</option>
+                    <option value="artes marciales">Artes Marciales</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="ciencia ficcion">Ciencia Ficción</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="deporte">Deporte</option>
+                    <option value="drama">Drama</option>
+                    <option value="fantasia">Fantasía</option>
+                    <option value="isekai">Isekai</option>
+                    <option value="mecha">Mecha</option>
+                    <option value="romance">Romance</option>
+                </select>
+            </div>
+        </div>
+    </header>
 
+<section class="container">
+    <p id="totalAnimes"></p>
+        <div class="filterable_cards">
+
+            <div class="card" data-name="fantasia" data-class="accion">
+                <img src="../catalogo/animes_pelis/ao_no_exorcist_blue_exorcist_the_movie-111671513-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Ao No Exorcist La Pelicula</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2012</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="deporte" data-gender="artes marciales" data-class="accion">
+                <img src="../catalogo/animes_pelis/baki_hanma_vs_kengan_ashura-279395146-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Baki Hanma VS Kengan Ashura</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2024</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="deporte" data-gender="drama" data-class="accion">
+                <img src="../catalogo/animes_pelis/BLUE LOCK [2024] [DUAL AUDIO].jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Blue Lock</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2024</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-gender="fantasia" data-class="accion">
+                <img src="../catalogo/animes_pelis/MY HERO ACADEMIA AHORA ES TU TURNO [2024].webp" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Boku No Hero Academia You Are Next</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2024</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="ciencia ficcion" data-gender="mecha" data-class="accion">
+                <img src="../catalogo/animes_pelis/code_geass_fukkatsu_no_lelouch-510886421-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Code Geass La Resurreccion De Lelouch</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2019</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="aventura">
+                <img src="../catalogo/animes_pelis/Gedo6sn.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Cuentos De Terramar</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2006</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="accion" data-gender="ciencia ficcion">
+                <img src="../catalogo/animes_pelis/Dr. Stone Ryusui [2022] [Dual Audio].jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Dr Stone Ryusui</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2022</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="aventura" data-gender="romance">
+                <img src="../catalogo/animes_pelis/EL CASTILLO AMBULANTE [2004] [DUAL AUDIO].jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">El Castillo Ambulante</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2004</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="aventura" data-gender="isekai">
+                <img src="../catalogo/animes_pelis/kimitachi_wa_do_ikiru_ka-917153869-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">El Chico Y La Garza</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2024</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="aventura" data-gender="isekai">
+                <img src="../catalogo/animes_pelis/sen_to_chihiro_no_kamikakushi-348587850-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">El Viaje De Chihiro</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2001</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="drama">
+                <img src="../catalogo/animes_pelis/kaze_tachinu-603357491-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">El Viento Se Levanta</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2013</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="accion" data-class="fantasia" data-gender="artes marciales">
+                <img src="../catalogo/animes_pelis/gekijo_ban_hagane_no_renkinjutsushi_shanbara_wo_yuku_mono_fullmetal_alchemist_the_movie_conqueror_of_shamballa-100923295-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Fullmetal Alchemist El conquistador de Shambala</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2005</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="musical">
+                <img src="../catalogo/animes_pelis/sero_hiki_no_goshu_aka_gauche_the_cellist_aka-311913089-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Goshu El Violoncelista</h6>
+                    <h6 class="card_title"><strong>Año: </strong>1982</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="aventura" data-gender="isekai">
+                <img src="../catalogo/animes_pelis/neko_no_ongaeshi-963174131-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Haru En El Reino De Los Gatos</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2002</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="aventura">
+                <img src="../catalogo/animes_pelis/KIKI ENTREGAS A DOMICILIO [1989] [LATINO].png" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Kiki Entregas A Domicilio</h6>
+                    <h6 class="card_title"><strong>Año: </strong>1989</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="aventura">
+                <img src="../catalogo/animes_pelis/Studio Ghibli - Mononoke Hime [Princess Mononoke] [1997] [720p].jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">La Princesa Mononoke</h6>
+                    <h6 class="card_title"><strong>Año: </strong>1997</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="drama">
+                <img src="../catalogo/animes_pelis/luciernaga.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">La Tumba De Las Luciernagas</h6>
+                    <h6 class="card_title"><strong>Año: </strong>1988</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="aventura">
+                <img src="../catalogo/animes_pelis/suki_demo_kirai_na_amanojaku-549233645-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Mi Querida Oni</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2024</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia">
+                <img src="../catalogo/animes_pelis/tonari_no_totoro-974352061-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Mi Vecino Totoro</h6>
+                    <h6 class="card_title"><strong>Año: </strong>1988</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="aventura" data-gender="ciencia ficcion">
+                <img src="../catalogo/animes_pelis/kaze_no_tani_no_naushika-695736917-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Nausica del Valle del Viento</h6>
+                    <h6 class="card_title"><strong>Año: </strong>1984</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="aventura" data-gender="isekai">
+                <img src="../catalogo/animes_pelis/OVERLORD 3 - SEI OUKOKU-HEN [2025].jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Overlord El Reino Sagrado</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2024</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="ciencia ficcion">
+                <img src="../catalogo/animes_pelis/papurika-439873032-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Paprika</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2006</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="aventura">
+                <img src="../catalogo/animes_pelis/gake_no_ue_no_ponyo-309484645-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Ponyo En El Acantilado</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2008</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="aventura">
+                <img src="../catalogo/animes_pelis/porcorosso.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Porco Rosso</h6>
+                    <h6 class="card_title"><strong>Año: </strong>1992</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="comedia">
+                <img src="../catalogo/animes_pelis/gekijoban_bishojo_senshi_sera_mun_aru_sailor_moon_r_the_movie-547893774-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Sailor Moon La Promesa De La Rosa</h6>
+                    <h6 class="card_title"><strong>Año: </strong>1993</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia" data-class="comedia" data-gender="accion">
+                <img src="../catalogo/animes_pelis/SAILOR MOON SUPER S EL AGUJERO NEGRO DE LOS SUEÑOS [1995].jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Sailor Moon Super S El milagro del agujero de los sueños</h6>
+                    <h6 class="card_title"><strong>Año: </strong>1995</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="drama" data-class="romance">
+                <img src="../catalogo/animes_pelis/Whisper of the Heart (Mimi Wo Sumaseba).jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Susurros Del Corazon</h6>
+                    <h6 class="card_title"><strong>Año: </strong>1995</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia">
+                <img src="../catalogo/animes_pelis/yu_gi_oh_season_0-943808081-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Yu Gi Oh</h6>
+                    <h6 class="card_title"><strong>Año: </strong>1999</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia">
+                <img src="../catalogo/animes_pelis/yu_gi_oh_the_movie-747789468-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Yu Gi Oh La Pelicula</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2004</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia">
+                <img src="../catalogo/animes_pelis/YU-GI-OH! 3 LAZOS MAS ALLA DEL TIEMPO [2010] [DUAL AUDIO].jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Yu Gi Oh Lazos Mas Alla Del Tiempo</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2010</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            <div class="card" data-name="fantasia">
+                <img src="../catalogo/animes_pelis/yu_gi_oh_the_dark_side_of_dimensions_aka_yu_gi_oh_the_dark_side_of_dimensions-949144323-large.jpg" alt="">
+                <div class="card_body">
+                    <h6 class="card_title">Yu Gi Oh El Lado Oscuro De Las Dimensiones</h6>
+                    <h6 class="card_title"><strong>Año: </strong>2016</h6>
+                    <p class="card_text"><a href="">Leer Más</a></p>
+                </div>
+            </div>
+
+            
+        </div>
+</section>
+
+<!-- Botón para subir al inicio con ícono -->
+<button id="btnSubir" title="Subir al inicio">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+    <footer>
+
+    </footer>
+    <script src="../js/animes_filter.js"></script>
+    <script src="../js/img_lazy.js"></script>
 </body>
 </html>
