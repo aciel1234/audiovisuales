@@ -94,3 +94,9 @@ const apiKey = "736ffafa";
           console.error("Error al cargar película:", error);
         });
     });
+
+    let ocultarPelis = document.getElementById('ocultar');
+    ocultarPelis.addEventListener('click', function() {
+      grid.classList.toggle('peliculas-grid');
+      grid.classList.add('ocultarPelis');
+    })
